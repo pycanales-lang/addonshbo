@@ -9,7 +9,7 @@
 :root{
     --primary:#1e3a8a;
     --secondary:#2563eb;
-    --accent:#fbbf24;
+    --accent:#22c55e;
     --danger:#ef4444;
     --success:#059669;
     --bg:#0f172a;
@@ -31,20 +31,27 @@ body{
     padding:20px;
     box-shadow:0 25px 50px -12px rgba(0,0,0,.45);
 }
+
+/* HEADER CAMPAÑA */
 .header{
     text-align:center;
+    padding:16px 12px;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    border-radius:18px;
+    margin-bottom:15px;
 }
 .tag{
     background:var(--accent);
-    color:#1e293b;
+    color:#052e16;
     font-size:11px;
-    font-weight:800;
+    font-weight:900;
     padding:4px 14px;
-    border-radius:12px;
+    border-radius:999px;
+    display:inline-block;
 }
-h1{
-    margin:8px 0;
-    color:var(--primary);
+.header h1{
+    margin:10px 0 0;
+    color:#fff;
     font-size:26px;
     font-weight:900;
 }
@@ -61,7 +68,7 @@ h1{
 .timer-title{
     font-size:11px;
     font-weight:800;
-    color:var(--danger);
+    color:#ef4444;
     margin-bottom:6px;
 }
 .progress{
@@ -99,40 +106,47 @@ h1{
     text-transform:uppercase;
 }
 
-/* INCENTIVO */
+/* CARD INCENTIVO */
 .card{
-    background:#f1f5f9;
-    border-radius:18px;
-    padding:16px;
+    background:linear-gradient(135deg,#f1f5f9,#ffffff);
+    border-radius:20px;
+    padding:18px;
     margin-top:15px;
+    border:1px solid #e2e8f0;
 }
 .card h2{
-    font-size:15px;
-    color:#1e293b;
-    margin-bottom:10px;
+    font-size:16px;
+    color:#0f172a;
+    margin-bottom:12px;
 }
 .card p{
     font-size:13px;
-    margin:6px 0;
+    margin:8px 0;
     color:#334155;
+    display:flex;
+    gap:6px;
 }
 .highlight{
-    font-weight:800;
+    font-weight:900;
     color:var(--primary);
 }
 
-/* BOTON */
+/* BOTÓN CTA */
 .btn{
     display:block;
-    margin:18px auto 0;
-    background:var(--secondary);
+    margin:22px auto 0;
+    background:linear-gradient(135deg,#2563eb,#1e40af);
     color:#fff;
     text-align:center;
-    padding:14px;
-    border-radius:14px;
+    padding:15px;
+    border-radius:16px;
     text-decoration:none;
-    font-weight:800;
-    font-size:14px;
+    font-weight:900;
+    font-size:15px;
+    box-shadow:0 10px 20px rgba(37,99,235,.35);
+}
+.btn:active{
+    transform:scale(.98);
 }
 
 /* BASES */
@@ -141,7 +155,7 @@ h1{
     border:1px solid #fde68a;
     border-radius:18px;
     padding:16px;
-    margin-top:20px;
+    margin-top:22px;
 }
 .bases h3{
     font-size:14px;
@@ -155,17 +169,18 @@ h1{
 }
 .anr{
     color:#b91c1c;
-    font-weight:800;
+    font-weight:900;
 }
 
-/* IMAGEN */
+/* IMAGEN PREMIO */
 .prize-img{
-    margin-top:20px;
+    margin-top:25px;
     text-align:center;
 }
 .prize-img img{
     max-width:100%;
-    border-radius:16px;
+    border-radius:18px;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
 }
 
 /* FOOTER */
@@ -182,7 +197,7 @@ h1{
 <div class="container">
 
     <div class="header">
-        <span class="tag">Incentivo Especial</span>
+        <span class="tag">🔥 Incentivo activo</span>
         <h1>Activaciones HBO</h1>
     </div>
 
@@ -202,12 +217,12 @@ h1{
     <!-- INCENTIVO -->
     <div class="card">
         <h2>🎯 Incentivo vigente – Enero</h2>
-        <p>Dirigido a las zonas de <span class="highlight">Central y Asunción</span></p>
-        <p><span class="highlight">Mecánica:</span> Soteo por cupones generados</p>
-        <p><span class="highlight">Premio:</span> Smartphone de <b>USD 450</b> por zona</p>
+        <p>📍 Zonas: <span class="highlight">Central y Asunción</span></p>
+        <p>🎟️ Modalidad: <span class="highlight">Sorteo por cupones</span></p>
+        <p>🏆 Premio: <b>Smartphone USD 450</b> por zona</p>
     </div>
 
-    <!-- BOTON PASO A PASO -->
+    <!-- BOTÓN -->
     <a href="paso-a-paso.html" class="btn">
         📲 Ver paso a paso de activación HBO
     </a>
@@ -216,21 +231,20 @@ h1{
     <div class="bases">
         <h3>📜 Mecánica del sorteo</h3>
         <ul>
-            <li><b>Método de participación:</b> por cada activación válida se genera <b>1 cupón</b></li>
-            <li>Mínimo para concursar: <b>2 activaciones</b></li>
-            <li>Generación de cupones por cada activación</li>
-            <li>Duplicación de cupones en días tácticos</li>
-            <li>Sorteo al final del período (del 2 al 31 de enero)</li>
+            <li><b>Método de participación:</b> 1 cupón por activación válida</li>
+            <li><b>Mínimo para concursar:</b> 2 activaciones</li>
+            <li><b>Días tácticos:</b> duplicación de cupones</li>
+            <li><b>Sorteo:</b> al cierre del período (2 al 31 de enero)</li>
         </ul>
 
         <h3>⚠️ Condiciones</h3>
         <ul>
-            <li>Las bajas o cancelaciones dentro de los <b>60 días</b> serán consideradas como <span class="anr">ANR</span></li>
+            <li>Bajas o cancelaciones dentro de 60 días serán <span class="anr">ANR</span></li>
             <li>Sujeto a cumplimiento de la zona</li>
         </ul>
     </div>
 
-    <!-- IMAGEN PREMIO -->
+    <!-- IMAGEN -->
     <div class="prize-img">
         <img src="./celular-asesor.jpg" alt="Premio Smartphone">
     </div>
@@ -249,35 +263,25 @@ function updateTimer(){
     const remaining = end - now;
 
     if (remaining > 0) {
-
         const progress = Math.min((elapsed / total) * 100, 100);
         const bar = document.getElementById("bar");
         bar.style.width = progress + "%";
 
-        /* 🎨 Cambio de color según avance */
         let color;
-        if (progress < 40) {
-            color = "#059669"; // verde
-        } else if (progress < 65) {
-            color = "#fbbf24"; // amarillo
-        } else if (progress < 85) {
-            color = "#f97316"; // naranja
-        } else {
-            color = "#ef4444"; // rojo
-        }
+        if (progress < 40) color = "#059669";
+        else if (progress < 65) color = "#fbbf24";
+        else if (progress < 85) color = "#f97316";
+        else color = "#ef4444";
+
         bar.style.backgroundColor = color;
 
-        const d = Math.floor(remaining / (1000 * 60 * 60 * 24));
-        const h = Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const m = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+        const d = Math.floor(remaining / (1000*60*60*24));
+        const h = Math.floor((remaining % (1000*60*60*24)) / (1000*60*60));
+        const m = Math.floor((remaining % (1000*60*60)) / (1000*60));
 
-        dEl.textContent = d.toString().padStart(2, "0");
-        hEl.textContent = h.toString().padStart(2, "0");
-        mEl.textContent = m.toString().padStart(2, "0");
-
-    } else {
-        document.getElementById("bar").style.width = "100%";
-        document.getElementById("bar").style.backgroundColor = "#ef4444";
+        dEl.textContent = d.toString().padStart(2,"0");
+        hEl.textContent = h.toString().padStart(2,"0");
+        mEl.textContent = m.toString().padStart(2,"0");
     }
 }
 
@@ -286,7 +290,7 @@ const hEl = document.getElementById("h");
 const mEl = document.getElementById("m");
 
 updateTimer();
-setInterval(updateTimer, 60000);
+setInterval(updateTimer,60000);
 </script>
 
 </body>
